@@ -1,3 +1,7 @@
 .vs/
 Assets/Prefabs/[VRTK_SDKManager].prefab
 Assets/Prefabs/[VRTK_SDKManager].prefab.meta
+Assets/SteamVR/
+Assets/VRTK/
+Library/
+Temp/
