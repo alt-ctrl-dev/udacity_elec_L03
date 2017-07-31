@@ -15,13 +15,17 @@ public class HandControllerInput : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        trackedObj = GetComponent<SteamVR_TrackedObject>();
-        device = SteamVR_Controller.Input((int)trackedObj.index);
+        trackedObj = GetComponent<SteamVR_TrackedObject>();       
         laser = GetComponentInChildren<LineRenderer>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        device = SteamVR_Controller.Input((int)trackedObj.index);
+
+        Debug.LogError(trackedObj.index);
+        Debug.LogError("DEVICE");
+        Debug.LogError(device.GetType().ToString());
         if (device.GetPress(SteamVR_Controller.ButtonMask.Trigger))
         {
             laser.gameObject.SetActive(true);
